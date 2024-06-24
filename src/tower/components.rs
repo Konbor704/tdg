@@ -1,10 +1,4 @@
-use std::ops::Add;
-
-use bevy::{
-    a11y::accesskit::Vec2,
-    prelude::*,
-    sprite::{MaterialMesh2dBundle, Mesh2dHandle},
-};
+use bevy::prelude::*;
 
 // COMPONENTS
 #[derive(Component)]
