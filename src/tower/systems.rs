@@ -1,4 +1,5 @@
 use bevy::{
+    color::palettes::basic::{BLUE, GREEN, RED},
     prelude::*,
     sprite::{MaterialMesh2dBundle, Mesh2dHandle},
 };
@@ -48,20 +49,20 @@ pub fn hp_label(mut c: Commands) {
         TextBundle::from_sections([
             TextSection::from_style(TextStyle {
                 font_size: 40.0,
-                color: Color::GREEN,
+                color: Color::from(GREEN),
                 ..default()
             }),
             TextSection::new(
                 " / ",
                 TextStyle {
                     font_size: 40.0,
-                    color: Color::BLUE,
+                    color: Color::from(BLUE),
                     ..Default::default()
                 },
             ),
             TextSection::from_style(TextStyle {
                 font_size: 40.0,
-                color: Color::RED,
+                color: Color::from(RED),
                 ..default()
             }),
         ])

@@ -40,7 +40,7 @@ pub fn moving(
         Err(_) => return,
     };
 
-    for (mut transform, enemy) in &mut q_moving {
+    for (mut transform, _enemy) in &mut q_moving {
         let dir = (castle_pos - transform.translation)
             .truncate()
             .normalize_or_zero()

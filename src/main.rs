@@ -27,7 +27,5 @@ fn main() {
 
     app.add_plugins((CamerasPlugin, TowerPlugin, EnemyPlugin));
 
-    app.add_systems(Update, bevy::window::close_on_esc);
-
     app.run();
 }
