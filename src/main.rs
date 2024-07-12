@@ -1,3 +1,4 @@
+use avian2d::prelude::*;
 use bevy::prelude::*;
 
 mod cameras;
@@ -24,6 +25,9 @@ fn main() {
         }),
         ..Default::default()
     }));
+
+    app.add_plugins(PhysicsPlugins::default())
+        .insert_resource(Gravity::ZERO);
 
     app.add_plugins((CamerasPlugin, TowerPlugin, EnemyPlugin));
 

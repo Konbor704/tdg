@@ -1,3 +1,5 @@
+use avian2d::prelude::{Collider, Restitution};
+use avian2d::prelude::{RigidBody, SweptCcd};
 use bevy::{
     color::palettes::basic::{BLUE, GREEN, RED},
     prelude::*,
@@ -29,6 +31,10 @@ pub fn spawn_tower(
             hp: 100.0,
             max_hp: 100.0,
         },
+        RigidBody::Kinematic,
+        Collider::circle(10.0),
+        SweptCcd::default(),
+        Restitution::new(0.1),
     ));
 }
 
